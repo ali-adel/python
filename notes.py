@@ -1183,4 +1183,77 @@ class base :
 ob = base()
 
 print(ob.__age) #can't access private attribute (can access only from it's class) """
-########################
+
+
+
+# setters & getters 
+
+""" class base :
+
+    def __init__(self) :
+        self.__age = 13
+
+    def set_age (self,new_age): # to set the value of the privalte attribute
+        self.__age = new_age
+
+    def get_age(self):         # to get the value of the privalte attribute
+        return self.__age    
+
+
+
+
+ob = base()
+print(ob.get_age()) # 13
+
+ob.set_age(21) 
+print(ob.get_age()) # 21 """
+
+
+# @property
+
+""" class base :
+
+    def __init__(self,n_name) :
+        self.name = n_name
+
+
+    def get_age(self):         # if the fun have just the "self" we can give it "@property" to treat with it like "attribute" 
+        return self.name 
+    
+    @property
+    def   say_hello(self):            
+        return f"hello {self.name}"
+
+
+obj = base("ali")
+
+
+print(obj.say_hello) # hello ali "treated as property"
+print(obj.get_age)  # can't print it's return (as it a function) """
+
+# abstract class  => have one or mor abstract method ( which is methods should be implemented in the child)
+
+""" from abc import ABCMeta , abstractclassmethod 
+
+class vehicle(metaclass  = ABCMeta) :
+      
+    @abstractclassmethod
+    def type_veihcle(self):  # should implement (override) this function in each children
+        pass
+
+
+class car(vehicle) :
+
+    def type_veihcle(self):
+        return "car"
+    
+
+class truck(vehicle) :
+    def type_veihcle(self):
+        return "truck"
+    
+
+
+carobj = car()
+
+print(carobj.type_veihcle()) """
