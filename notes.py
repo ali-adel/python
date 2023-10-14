@@ -1,3 +1,30 @@
+# list 
+
+""" mylist  = list(range(1,100))
+a = [100,200,300,400,500] """
+
+#print(mylist[0:100 : 1])  #  => mylist[st : end : steps]
+#print(mylist[100:0:-1])   #  => -1 mean revers order 
+#print(mylist[49:-4])      #  => -4 mean the last fourth element
+#print(mylist.append(600)) #  => append 600 in the last of mylist
+#print(mylist.extend(a))    #  => add a list to mylist  
+
+# dictionary 
+
+""" mydict = {"ali" : 12 , "alaa" : 20 , "ahmed" : 30}
+
+print(mydict['ali']) # 12 
+
+mydict['alaa'] = 55  # => exist so it will set it's value
+mydict['lol'] = 66 # doesn't exist so it will be added
+
+
+print(mydict.keys()) # get tge mydict "keys"
+print(mydict.values())# get tge mydict "values"
+print(mydict.items())# get tge mydict "keys & values"
+ """
+
+
 ############################################# type convestion ##################################
 
  # str() -> convevrt to string 
@@ -682,7 +709,7 @@ print(termcolor.colored(pyfiglet.figlet_format("ALAWY"),color="yellow"))  """
 
  ############################################# date and time ####################################################
 
-import datetime
+#import datetime
 
 
 """ print(datetime.datetime.now()) # the current datetime   """ 
@@ -919,7 +946,7 @@ for i in lists :
 
 
 #split(pattern , string , max split) # seprates the string with the pattern you want
-import re
+#import re
 
 """ str = "hello my friend"
 hold = re.split("\s" , str,1)
@@ -1257,3 +1284,15 @@ class truck(vehicle) :
 carobj = car()
 
 print(carobj.type_veihcle()) """
+
+
+#***********************************************************************************************************
+######################################### Advanced #########################################################
+############################################################################################################
+
+#__name__  => it is a built in function and it's value is "__main__" (tell you if the file running directly or imported )
+
+# if __name__ = "__main__" => so the file runing directly else it is imported
+
+
+
