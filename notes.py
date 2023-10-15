@@ -1,4 +1,4 @@
-# list 
+###### list 
 
 """ mylist  = list(range(1,100))
 a = [100,200,300,400,500] """
@@ -9,7 +9,9 @@ a = [100,200,300,400,500] """
 #print(mylist.append(600)) #  => append 600 in the last of mylist
 #print(mylist.extend(a))    #  => add a list to mylist  
 
-# dictionary 
+
+
+###### dictionary 
 
 """ mydict = {"ali" : 12 , "alaa" : 20 , "ahmed" : 30}
 
@@ -24,6 +26,47 @@ print(mydict.values())# get tge mydict "values"
 print(mydict.items())# get tge mydict "keys & values"
  """
 
+
+###### list comprehensive 
+
+# myl = [ task  for i in  iterable] 
+# first take the iterable  and apply the task on every element in it like map
+
+
+""" radii = [10,2,3,5,6]
+areas = [3.14 * (r**2) for r in radii]    
+
+print(areas)  # [314.0, 12.56, 28.26, 78.5, 113.04] """  
+
+# with if 
+# myl = [ task  for i in  iterable if cond ] # with condition if true apply the task else ignore
+
+""" radii = [10,2,3,5,6]
+areas = [3.14 * (r**2) for r in radii if r % 3 == 0]
+
+print(areas)  # [28.26, 113.04] """
+
+# with if else
+# myl = [ task1  if cond else task2 for i in iterable ] # with condition if true apply the task else ignore
+
+""" radii = [10,2,3,5,6]
+areas = [ 3.14 * (r**2)  if r % 3 == 0   else  r * 2   for r in radii ]
+
+print(areas)  #[20, 4, 28.26, 10, 113.04] 
+"""
+
+
+###### dictionary comprehensive 
+
+# myl = { k:v  for k,v  in  zip(iterable1,iterable2) } # all the remain like the list comprehensive
+
+
+""" keys = ["ali" , "adel" , "sayed" ,"ahmed"]
+values = [15,16,17,18]
+mydict = { k:v for k,v in zip(keys,values)}    
+
+print(mydict)  # {'ali': 15, 'adel': 16, 'sayed': 17, 'ahmed': 18}
+ """
 
 ############################################# type convestion ##################################
 
@@ -359,6 +402,22 @@ full_name("ali", "sayed")       #"ali", "sayed"=>arguments
     
 
 myfun("ali" ,"html" ,"css" ,"js" ) """
+
+
+#return many values (oh my god i waste time learning c )
+
+""" def calc (a, b ) :
+    
+    add = a + b 
+    mult = a * b 
+    div = a / b 
+
+    return add , mult , div
+
+x ,y ,z = calc(10,20)
+print(x)
+print(y)
+print(z) """
 
  ############################################# global and local variable ####################################################
 
